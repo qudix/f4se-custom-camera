@@ -6,7 +6,7 @@ includes("lib/commonlibf4")
 
 -- set project
 set_project("f4se-custom-camera")
-set_version("0.5.0")
+set_version("0.5.1")
 set_license("GPL-3.0")
 
 -- set defaults
