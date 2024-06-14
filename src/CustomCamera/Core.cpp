@@ -42,26 +42,26 @@ namespace CustomCamera
 
 	void Core::OnSerialLoad(const F4SE::SerializationInterface* a_intfc, std::uint32_t a_version, std::uint32_t& a_length)
 	{
-		if (!a_intfc->ReadRecordDataEx(a_length, m_leftSide)) {
-			logs::error("failed to load m_leftSide");
+		if (!a_intfc->ReadRecordDataEx(a_length, m_leftShoulder)) {
+			logs::error("failed to load m_leftShoulder");
 		}
 	}
 
 	void Core::OnSerialSave(const F4SE::SerializationInterface* a_intfc, std::uint32_t a_type, std::uint32_t a_version)
 	{
 		if (a_intfc->OpenRecord(a_type, a_version)) {
-			a_intfc->WriteRecordData(m_leftSide);
+			a_intfc->WriteRecordData(m_leftShoulder);
 		}
 	}
 
 	void Core::OnSerialRevert()
 	{
-		m_leftSide = false;
+		m_leftShoulder = false;
 	}
 
-	void Core::ToggleSide()
+	void Core::ToggleShoulder()
 	{
-		m_leftSide = !m_leftSide;
+		m_leftShoulder = !m_leftShoulder;
 	}
 
 	void Core::SetSneaking(bool a_sneaking)
@@ -80,6 +80,8 @@ namespace CustomCamera
 		UpdateMouse();
 		UpdateFOV();
 		UpdateMisc();
+
+		Apply();
 	}
 
 	void Core::UpdateCamera()
@@ -97,23 +99,23 @@ namespace CustomCamera
 		const auto& mcm = CoreData::GetSingleton()->GetMCM();
 		if (RE::PowerArmor::PlayerInPowerArmor()) {
 			if (m_sneaking) {
-				m_cameraOverShoulderPosX->SetFloat(m_leftSide ? mcm.cameraPANormalSneakPosXLeft : mcm.cameraPANormalSneakPosXRight);
-				m_cameraOverShoulderMeleeCombatPosX->SetFloat(m_leftSide ? mcm.cameraPAMeleeSneakPosXLeft : mcm.cameraPAMeleeSneakPosXRight);
-				m_cameraOverShoulderCombatPosX->SetFloat(m_leftSide ? mcm.cameraPACombatSneakPosXLeft : mcm.cameraPACombatSneakPosXRight);
+				m_cameraOverShoulderPosX = m_leftShoulder ? mcm.cameraPANormalSneakPosXLeft : mcm.cameraPANormalSneakPosXRight;
+				m_cameraOverShoulderMeleeCombatPosX = m_leftShoulder ? mcm.cameraPAMeleeSneakPosXLeft : mcm.cameraPAMeleeSneakPosXRight;
+				m_cameraOverShoulderCombatPosX = m_leftShoulder ? mcm.cameraPACombatSneakPosXLeft : mcm.cameraPACombatSneakPosXRight;
 			} else {
-				m_cameraOverShoulderPosX->SetFloat(m_leftSide ? mcm.cameraPANormalStandPosXLeft : mcm.cameraPANormalStandPosXRight);
-				m_cameraOverShoulderMeleeCombatPosX->SetFloat(m_leftSide ? mcm.cameraPAMeleeStandPosXLeft : mcm.cameraPAMeleeStandPosXRight);
-				m_cameraOverShoulderCombatPosX->SetFloat(m_leftSide ? mcm.cameraPACombatStandPosXLeft : mcm.cameraPACombatStandPosXRight);
+				m_cameraOverShoulderPosX = m_leftShoulder ? mcm.cameraPANormalStandPosXLeft : mcm.cameraPANormalStandPosXRight;
+				m_cameraOverShoulderMeleeCombatPosX = m_leftShoulder ? mcm.cameraPAMeleeStandPosXLeft : mcm.cameraPAMeleeStandPosXRight;
+				m_cameraOverShoulderCombatPosX = m_leftShoulder ? mcm.cameraPACombatStandPosXLeft : mcm.cameraPACombatStandPosXRight;
 			}
 		} else {
 			if (m_sneaking) {
-				m_cameraOverShoulderPosX->SetFloat(m_leftSide ? mcm.cameraACNormalSneakPosXLeft : mcm.cameraACNormalSneakPosXRight);
-				m_cameraOverShoulderMeleeCombatPosX->SetFloat(m_leftSide ? mcm.cameraACMeleeSneakPosXLeft : mcm.cameraACMeleeSneakPosXRight);
-				m_cameraOverShoulderCombatPosX->SetFloat(m_leftSide ? mcm.cameraACCombatSneakPosXLeft : mcm.cameraACCombatSneakPosXRight);
+				m_cameraOverShoulderPosX = m_leftShoulder ? mcm.cameraACNormalSneakPosXLeft : mcm.cameraACNormalSneakPosXRight;
+				m_cameraOverShoulderMeleeCombatPosX = m_leftShoulder ? mcm.cameraACMeleeSneakPosXLeft : mcm.cameraACMeleeSneakPosXRight;
+				m_cameraOverShoulderCombatPosX = m_leftShoulder ? mcm.cameraACCombatSneakPosXLeft : mcm.cameraACCombatSneakPosXRight;
 			} else {
-				m_cameraOverShoulderPosX->SetFloat(m_leftSide ? mcm.cameraACNormalStandPosXLeft : mcm.cameraACNormalStandPosXRight);
-				m_cameraOverShoulderMeleeCombatPosX->SetFloat(m_leftSide ? mcm.cameraACMeleeStandPosXLeft : mcm.cameraACMeleeStandPosXRight);
-				m_cameraOverShoulderCombatPosX->SetFloat(m_leftSide ? mcm.cameraACCombatStandPosXLeft : mcm.cameraACCombatStandPosXRight);
+				m_cameraOverShoulderPosX = m_leftShoulder ? mcm.cameraACNormalStandPosXLeft : mcm.cameraACNormalStandPosXRight;
+				m_cameraOverShoulderMeleeCombatPosX = m_leftShoulder ? mcm.cameraACMeleeStandPosXLeft : mcm.cameraACMeleeStandPosXRight;
+				m_cameraOverShoulderCombatPosX = m_leftShoulder ? mcm.cameraACCombatStandPosXLeft : mcm.cameraACCombatStandPosXRight;
 			}
 		}
 	}
@@ -122,45 +124,45 @@ namespace CustomCamera
 	{
 		const auto& mcm = CoreData::GetSingleton()->GetMCM();
 		if (RE::PowerArmor::PlayerInPowerArmor()) {
-			m_cameraOverShoulderPosZ->SetFloat(m_sneaking ? mcm.cameraPANormalSneakPosZ : mcm.cameraPANormalStandPosZ);
-			m_cameraOverShoulderMeleeCombatPosZ->SetFloat(m_sneaking ? mcm.cameraPAMeleeSneakPosZ : mcm.cameraPAMeleeStandPosZ);
-			m_cameraOverShoulderCombatPosZ->SetFloat(m_sneaking ? mcm.cameraPACombatSneakPosZ : mcm.cameraPACombatStandPosZ);
+			m_cameraOverShoulderPosZ = m_sneaking ? mcm.cameraPANormalSneakPosZ : mcm.cameraPANormalStandPosZ;
+			m_cameraOverShoulderMeleeCombatPosZ = m_sneaking ? mcm.cameraPAMeleeSneakPosZ : mcm.cameraPAMeleeStandPosZ;
+			m_cameraOverShoulderCombatPosZ = m_sneaking ? mcm.cameraPACombatSneakPosZ : mcm.cameraPACombatStandPosZ;
 		} else {
-			m_cameraOverShoulderPosZ->SetFloat(m_sneaking ? mcm.cameraACNormalSneakPosZ : mcm.cameraACNormalStandPosZ);
-			m_cameraOverShoulderMeleeCombatPosZ->SetFloat(m_sneaking ? mcm.cameraACMeleeSneakPosZ : mcm.cameraACMeleeStandPosZ);
-			m_cameraOverShoulderCombatPosZ->SetFloat(m_sneaking ? mcm.cameraACCombatSneakPosZ : mcm.cameraACCombatStandPosZ);
+			m_cameraOverShoulderPosZ = m_sneaking ? mcm.cameraACNormalSneakPosZ : mcm.cameraACNormalStandPosZ;
+			m_cameraOverShoulderMeleeCombatPosZ = m_sneaking ? mcm.cameraACMeleeSneakPosZ : mcm.cameraACMeleeStandPosZ;
+			m_cameraOverShoulderCombatPosZ = m_sneaking ? mcm.cameraACCombatSneakPosZ : mcm.cameraACCombatStandPosZ;
 		}
 	}
 
 	void Core::UpdateOffset()
 	{
-		float x = std::powf(std::fabsf(m_cameraOverShoulderCombatPosX->GetFloat()), 2.0f);
-		float z = std::powf(m_cameraOverShoulderCombatPosZ->GetFloat(), 2.0f);
-		m_camera3rdPersonAimDist->SetFloat(std::sqrtf(x + z));
+		float x = std::powf(std::fabsf(m_cameraOverShoulderCombatPosX), 2.0f);
+		float z = std::powf(m_cameraOverShoulderCombatPosZ, 2.0f);
+		m_camera3rdPersonAimDist = std::sqrtf(x + z);
 	}
 
 	void Core::UpdateZoom()
 	{
 		const auto& mcm = CoreData::GetSingleton()->GetMCM();
 		if (RE::PowerArmor::PlayerInPowerArmor()) {
-			m_cameraOverShoulderMeleeCombatAddY->SetFloat(mcm.cameraPAMeleeZoom);
-			m_cameraOverShoulderCombatAddY->SetFloat(mcm.cameraPACombatZoom);
+			m_cameraOverShoulderMeleeCombatAddY = mcm.cameraPAMeleeZoom;
+			m_cameraOverShoulderCombatAddY = mcm.cameraPACombatZoom;
 		} else {
-			m_cameraOverShoulderMeleeCombatAddY->SetFloat(mcm.cameraACMeleeZoom);
-			m_cameraOverShoulderCombatAddY->SetFloat(mcm.cameraACCombatZoom);
+			m_cameraOverShoulderMeleeCombatAddY = mcm.cameraACMeleeZoom;
+			m_cameraOverShoulderCombatAddY = mcm.cameraACCombatZoom;
 		}
 	}
 
 	void Core::UpdateVanity()
 	{
 		const auto& mcm = CoreData::GetSingleton()->GetMCM();
-		m_cameraDisableAutoVanityMode->SetBinary(mcm.mainVanityMode);
+		m_cameraDisableAutoVanityMode = mcm.mainVanityMode;
 		if (RE::PowerArmor::PlayerInPowerArmor()) {
-			m_cameraVanityModeMinDist->SetFloat(mcm.cameraPAMinDist);
-			m_cameraVanityModeMaxDist->SetFloat(mcm.cameraPAMaxDist);
+			m_cameraVanityModeMinDist = mcm.cameraPAMinDist;
+			m_cameraVanityModeMaxDist = mcm.cameraPAMaxDist;
 		} else {
-			m_cameraVanityModeMinDist->SetFloat(mcm.cameraACMinDist);
-			m_cameraVanityModeMaxDist->SetFloat(mcm.cameraACMaxDist);
+			m_cameraVanityModeMinDist = mcm.cameraACMinDist;
+			m_cameraVanityModeMaxDist = mcm.cameraACMaxDist;
 		}
 	}
 
@@ -168,27 +170,58 @@ namespace CustomCamera
 	{
 		const auto& mcm = CoreData::GetSingleton()->GetMCM();
 		if (RE::PowerArmor::PlayerInPowerArmor()) {
-			m_cameraMouseWheelZoomSpeed->SetFloat(mcm.cameraPAZoomSpeed);
-			m_cameraMouseWheelZoomIncrement->SetFloat(mcm.cameraPAZoomIncrement);
+			m_cameraMouseWheelZoomSpeed = mcm.cameraPAZoomSpeed;
+			m_cameraMouseWheelZoomIncrement = mcm.cameraPAZoomIncrement;
 		} else {
-			m_cameraMouseWheelZoomSpeed->SetFloat(mcm.cameraACZoomSpeed);
-			m_cameraMouseWheelZoomIncrement->SetFloat(mcm.cameraACZoomIncrement);
+			m_cameraMouseWheelZoomSpeed = mcm.cameraACZoomSpeed;
+			m_cameraMouseWheelZoomIncrement = mcm.cameraACZoomIncrement;
 		}
 	}
 
 	void Core::UpdateFOV()
 	{
 		const auto& mcm = CoreData::GetSingleton()->GetMCM();
-		m_cameraDefault1stPersonFOV->SetFloat(mcm.camera1stFOV);
-		m_cameraDefaultWorldFOV->SetFloat(mcm.camera3rdFOV);
-		m_camera3rdPersonAimFOV->SetFloat(mcm.camera3rdAimFOV);
+		m_cameraDefault1stPersonFOV = mcm.camera1stFOV;
+		m_cameraDefaultWorldFOV = mcm.camera3rdFOV;
+		m_camera3rdPersonAimFOV = mcm.camera3rdAimFOV;
 	}
 
 	void Core::UpdateMisc()
 	{
 		const auto& mcm = CoreData::GetSingleton()->GetMCM();
-		m_cameraChangeSpeed->SetFloat(mcm.cameraChangeSpeed);
-		m_cameraPitchZoom->SetFloat(mcm.cameraPitchZoom);
+		m_cameraChangeSpeed = mcm.cameraChangeSpeed;
+		m_cameraPitchZoom = mcm.cameraPitchZoom;
+	}
+
+	void Core::Apply()
+	{
+		const auto ini = RE::INISettingCollection::GetSingleton();
+		ini->GetSetting("fOverShoulderPosX:Camera")->SetFloat(m_cameraOverShoulderPosX);
+		ini->GetSetting("fOverShoulderMeleeCombatPosX:Camera")->SetFloat(m_cameraOverShoulderMeleeCombatPosX);
+		ini->GetSetting("fOverShoulderCombatPosX:Camera")->SetFloat(m_cameraOverShoulderCombatPosX);
+
+		ini->GetSetting("fOverShoulderPosZ:Camera")->SetFloat(m_cameraOverShoulderPosZ);
+		ini->GetSetting("fOverShoulderMeleeCombatPosZ:Camera")->SetFloat(m_cameraOverShoulderMeleeCombatPosZ);
+		ini->GetSetting("fOverShoulderCombatPosZ:Camera")->SetFloat(m_cameraOverShoulderCombatPosZ);
+
+		ini->GetSetting("f3rdPersonAimDist:Camera")->SetFloat(m_camera3rdPersonAimDist);
+
+		ini->GetSetting("fOverShoulderMeleeCombatAddY:Camera")->SetFloat(m_cameraOverShoulderMeleeCombatAddY);
+		ini->GetSetting("fOverShoulderCombatAddY:Camera")->SetFloat(m_cameraOverShoulderCombatAddY);
+
+		ini->GetSetting("bDisableAutoVanityMode:Camera")->SetBinary(m_cameraDisableAutoVanityMode);
+		ini->GetSetting("fVanityModeMinDist:Camera")->SetFloat(m_cameraVanityModeMinDist);
+		ini->GetSetting("fVanityModeMaxDist:Camera")->SetFloat(m_cameraVanityModeMaxDist);
+
+		ini->GetSetting("fMouseWheelZoomSpeed:Camera")->SetFloat(m_cameraMouseWheelZoomSpeed);
+		ini->GetSetting("fMouseWheelZoomIncrement:Camera")->SetFloat(m_cameraMouseWheelZoomIncrement);
+
+		ini->GetSetting("fDefault1stPersonFOV:Display")->SetFloat(m_cameraDefault1stPersonFOV);
+		ini->GetSetting("fDefaultWorldFOV:Display")->SetFloat(m_cameraDefaultWorldFOV);
+		ini->GetSetting("f3rdPersonAimFOV:Camera")->SetFloat(m_camera3rdPersonAimFOV);
+
+		ini->GetSetting("fShoulderDollySpeed:Camera")->SetFloat(m_cameraChangeSpeed);
+		ini->GetSetting("fPitchZoomOutMaxDist:Camera")->SetFloat(m_cameraPitchZoom);
 	}
 
 	RE::BSEventNotifyControl Core::ProcessEvent(const RE::TESFurnitureEvent& a_event, RE::BSTEventSource<RE::TESFurnitureEvent>*)

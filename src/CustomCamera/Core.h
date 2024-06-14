@@ -13,7 +13,7 @@ namespace CustomCamera
 		void OnSerialSave(const F4SE::SerializationInterface* a_intfc, std::uint32_t a_type, std::uint32_t a_version);
 		void OnSerialRevert();
 
-		void ToggleSide();
+		void ToggleShoulder();
 
 		void SetSneaking(bool a_sneaking);
 
@@ -28,38 +28,40 @@ namespace CustomCamera
 		void UpdateFOV();
 		void UpdateMisc();
 
+		void Apply();
+
 	public: // BSTEventSink
 		virtual RE::BSEventNotifyControl ProcessEvent(const RE::TESFurnitureEvent& a_event, RE::BSTEventSource<RE::TESFurnitureEvent>*) override;
 
 	private:
-		bool m_leftSide{ false };
+		bool m_leftShoulder{ false };
 		bool m_sneaking{ false };
 
-		RE::Setting* m_cameraOverShoulderPosX;
-		RE::Setting* m_cameraOverShoulderMeleeCombatPosX;
-		RE::Setting* m_cameraOverShoulderCombatPosX;
+		float m_cameraOverShoulderPosX;
+		float m_cameraOverShoulderMeleeCombatPosX;
+		float m_cameraOverShoulderCombatPosX;
 
-		RE::Setting* m_cameraOverShoulderPosZ;
-		RE::Setting* m_cameraOverShoulderMeleeCombatPosZ;
-		RE::Setting* m_cameraOverShoulderCombatPosZ;
+		float m_cameraOverShoulderPosZ;
+		float m_cameraOverShoulderMeleeCombatPosZ;
+		float m_cameraOverShoulderCombatPosZ;
 
-		RE::Setting* m_cameraOverShoulderMeleeCombatAddY;
-		RE::Setting* m_cameraOverShoulderCombatAddY;
+		float m_cameraOverShoulderMeleeCombatAddY;
+		float m_cameraOverShoulderCombatAddY;
 
-		RE::Setting* m_cameraDisableAutoVanityMode;
-		RE::Setting* m_cameraVanityModeMinDist;
-		RE::Setting* m_cameraVanityModeMaxDist;
+		bool m_cameraDisableAutoVanityMode;
+		float m_cameraVanityModeMinDist;
+		float m_cameraVanityModeMaxDist;
 
-		RE::Setting* m_cameraMouseWheelZoomSpeed;
-		RE::Setting* m_cameraMouseWheelZoomIncrement;
+		float m_cameraMouseWheelZoomSpeed;
+		float m_cameraMouseWheelZoomIncrement;
 
-		RE::Setting* m_cameraDefault1stPersonFOV;
-		RE::Setting* m_cameraDefaultWorldFOV;
-		RE::Setting* m_camera3rdPersonAimFOV;
+		float m_cameraDefault1stPersonFOV;
+		float m_cameraDefaultWorldFOV;
+		float m_camera3rdPersonAimFOV;
 
-		RE::Setting* m_cameraChangeSpeed;
-		RE::Setting* m_cameraPitchZoom;
+		float m_cameraChangeSpeed;
+		float m_cameraPitchZoom;
 
-		RE::Setting* m_camera3rdPersonAimDist;
+		float m_camera3rdPersonAimDist;
 	};
 }

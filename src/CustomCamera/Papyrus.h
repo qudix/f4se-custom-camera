@@ -31,7 +31,7 @@ namespace CustomCamera::Papyrus
 	inline void ToggleShoulder(std::monostate)
 	{
 		const auto core = Core::GetSingleton();
-		core->ToggleSide();
+		core->ToggleShoulder();
 		core->Update();
 		core->UpdateCamera();
 	}
