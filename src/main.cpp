@@ -41,7 +41,7 @@ void OnMessage(F4SE::MessagingInterface::Message* a_msg)
 		case F4SE::MessagingInterface::kPostLoad: {
 			Hook_PlayerCharacter::Install();
 		} break;
-        case F4SE::MessagingInterface::kGameLoaded: {
+        case F4SE::MessagingInterface::kGameDataReady: {
 			CustomCamera::CoreData::GetSingleton()->Load();
             CustomCamera::Core::GetSingleton()->Init();
         } break;
