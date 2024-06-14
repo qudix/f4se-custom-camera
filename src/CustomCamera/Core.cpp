@@ -6,6 +6,7 @@ namespace CustomCamera
 	void Core::Init()
 	{
 		RE::TESFurnitureEvent::GetEventSource()->RegisterSink(this);
+		RE::ActorEquipManager::GetSingleton()->RegisterSink(this);
 
 		const auto ini = RE::INISettingCollection::GetSingleton();
 		ini->GetSetting("bApplyCameraNodeAnimations:Camera")->SetBinary(false);
@@ -112,6 +113,18 @@ namespace CustomCamera
 		float x = std::powf(std::fabsf(m_cameraOverShoulderCombatPosX), 2.0f);
 		float z = std::powf(m_cameraOverShoulderCombatPosZ, 2.0f);
 		m_camera3rdPersonAimDist = std::sqrtf(x + z);
+
+		// HHS Compatibility
+		if (const auto player = RE::PlayerCharacter::GetSingleton()) {
+			if (const auto root = player->Get3D(false)) {
+				if (const auto node = root->GetObjectByName("COM_Override")) {
+					const auto nodeZ = node->local.translate.z;
+					m_cameraOverShoulderPosZ += nodeZ;
+					m_cameraOverShoulderMeleeCombatPosZ += nodeZ;
+					m_cameraOverShoulderCombatPosZ += nodeZ;
+				}
+			}
+		}
 	}
 
 	void Core::UpdateZoom()
@@ -200,6 +213,14 @@ namespace CustomCamera
 	RE::BSEventNotifyControl Core::ProcessEvent(const RE::TESFurnitureEvent& a_event, RE::BSTEventSource<RE::TESFurnitureEvent>*)
 	{
 		if (a_event.actor->IsPlayerRef())
+			Update();
+
+		return RE::BSEventNotifyControl::kContinue;
+	}
+
+	RE::BSEventNotifyControl Core::ProcessEvent(const RE::ActorEquipManagerEvent::Event& a_event, RE::BSTEventSource<RE::ActorEquipManagerEvent::Event>*)
+	{
+		if (a_event.actorAffected->IsPlayerRef())
 			Update();
 
 		return RE::BSEventNotifyControl::kContinue;

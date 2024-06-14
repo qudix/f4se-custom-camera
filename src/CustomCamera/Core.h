@@ -4,7 +4,8 @@ namespace CustomCamera
 {
 	class Core :
 		public REX::Singleton<Core>,
-		public RE::BSTEventSink<RE::TESFurnitureEvent>
+		public RE::BSTEventSink<RE::TESFurnitureEvent>,
+		public RE::BSTEventSink<RE::ActorEquipManagerEvent::Event>
 	{
 	public:
 		void Init();
@@ -32,6 +33,7 @@ namespace CustomCamera
 
 	public: // BSTEventSink
 		virtual RE::BSEventNotifyControl ProcessEvent(const RE::TESFurnitureEvent& a_event, RE::BSTEventSource<RE::TESFurnitureEvent>*) override;
+		virtual RE::BSEventNotifyControl ProcessEvent(const RE::ActorEquipManagerEvent::Event& a_event, RE::BSTEventSource<RE::ActorEquipManagerEvent::Event>*) override;
 
 	private:
 		bool m_leftShoulder{ false };
