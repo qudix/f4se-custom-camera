@@ -8,33 +8,6 @@ namespace CustomCamera
 		RE::TESFurnitureEvent::GetEventSource()->RegisterSink(this);
 
 		const auto ini = RE::INISettingCollection::GetSingleton();
-		m_cameraOverShoulderPosX = ini->GetSetting("fOverShoulderPosX:Camera");
-		m_cameraOverShoulderMeleeCombatPosX = ini->GetSetting("fOverShoulderMeleeCombatPosX:Camera");
-		m_cameraOverShoulderCombatPosX = ini->GetSetting("fOverShoulderCombatPosX:Camera");
-
-		m_cameraOverShoulderPosZ = ini->GetSetting("fOverShoulderPosZ:Camera");
-		m_cameraOverShoulderMeleeCombatPosZ = ini->GetSetting("fOverShoulderMeleeCombatPosZ:Camera");
-		m_cameraOverShoulderCombatPosZ = ini->GetSetting("fOverShoulderCombatPosZ:Camera");
-
-		m_camera3rdPersonAimDist = ini->GetSetting("f3rdPersonAimDist:Camera");
-
-		m_cameraOverShoulderMeleeCombatAddY = ini->GetSetting("fOverShoulderMeleeCombatAddY:Camera");
-		m_cameraOverShoulderCombatAddY = ini->GetSetting("fOverShoulderCombatAddY:Camera");
-
-		m_cameraDisableAutoVanityMode = ini->GetSetting("bDisableAutoVanityMode:Camera");
-		m_cameraVanityModeMinDist = ini->GetSetting("fVanityModeMinDist:Camera");
-		m_cameraVanityModeMaxDist = ini->GetSetting("fVanityModeMaxDist:Camera");
-
-		m_cameraMouseWheelZoomSpeed = ini->GetSetting("fMouseWheelZoomSpeed:Camera");
-		m_cameraMouseWheelZoomIncrement = ini->GetSetting("fMouseWheelZoomIncrement:Camera");
-
-		m_cameraDefault1stPersonFOV = ini->GetSetting("fDefault1stPersonFOV:Display");
-		m_cameraDefaultWorldFOV = ini->GetSetting("fDefaultWorldFOV:Display");
-		m_camera3rdPersonAimFOV = ini->GetSetting("f3rdPersonAimFOV:Camera");
-
-		m_cameraChangeSpeed = ini->GetSetting("fShoulderDollySpeed:Camera");
-		m_cameraPitchZoom = ini->GetSetting("fPitchZoomOutMaxDist:Camera");
-
 		ini->GetSetting("bApplyCameraNodeAnimations:Camera")->SetBinary(false);
 
 		Update();
