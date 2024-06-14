@@ -1,6 +1,6 @@
-# CommonLibF4 Plugin Template
+# custom-camera
 
-This is a basic plugin template using CommonLibF4.
+Customize the in-game camera.
 
 ### Requirements
 * [XMake](https://xmake.io) [2.8.2+]
@@ -8,8 +8,8 @@ This is a basic plugin template using CommonLibF4.
 
 ## Getting Started
 ```bat
-git clone --recurse-submodules https://github.com/qudix/commonlibf4-template
-cd commonlibf4-template
+git clone --recurse-submodules https://github.com/qudix/f4se-custom-camera
+cd f4se-custom-camera
 ```
 
 ### Build
