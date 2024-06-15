@@ -11,11 +11,12 @@ namespace CustomCamera::Papyrus
 			if (const auto camera = RE::PlayerCamera::GetSingleton()) {
 				camera->ToggleFreeCameraMode(a_freezeTime);
 
-				const auto control = RE::ControlMap::GetSingleton();
-				if (camera->QCameraEquals(RE::CameraState::kFree))
-					control->PushInputContext(RE::UserEvents::INPUT_CONTEXT_ID::kTFC);
-				else
-					control->PopInputContext(RE::UserEvents::INPUT_CONTEXT_ID::kTFC);
+				if (const auto control = RE::ControlMap::GetSingleton()) {
+					if (camera->QCameraEquals(RE::CameraState::kFree))
+						control->PushInputContext(RE::UserEvents::INPUT_CONTEXT_ID::kTFC);
+					else
+						control->PopInputContext(RE::UserEvents::INPUT_CONTEXT_ID::kTFC);
+				}
 			}
 		}
 	}

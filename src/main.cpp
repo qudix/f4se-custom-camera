@@ -3,15 +3,6 @@
 
 struct Hook_PlayerCharacter
 {
-	static bool DoCanRotate(RE::PlayerCharacter* a_this)
-	{
-		if (const auto camera = RE::PlayerCamera::GetSingleton())
-			if (camera->QCameraEquals(RE::CameraState::kFree))
-				return false;
-
-		return _DoCanRotate(a_this);
-	}
-
 	static bool SetSneaking(RE::PlayerCharacter* a_this, bool a_sneaking)
 	{
 		bool result = _SetSneaking(a_this, a_sneaking);
@@ -24,13 +15,11 @@ struct Hook_PlayerCharacter
 		return result;
 	}
 
-	inline static REL::Relocation<decltype(DoCanRotate)> _DoCanRotate;
 	inline static REL::Relocation<decltype(SetSneaking)> _SetSneaking;
 
 	static void Install()
 	{
 		static REL::Relocation vtbl{ RE::PlayerCharacter::VTABLE[0] };
-		_DoCanRotate = vtbl.write_vfunc(0x18, DoCanRotate);
 		_SetSneaking = vtbl.write_vfunc(0x120, SetSneaking);
 	}
 };
