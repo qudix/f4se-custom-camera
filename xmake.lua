@@ -45,21 +45,5 @@ target("f4se-custom-camera")
     add_includedirs("src")
     set_pcxxheader("src/pch.h")
 
-    -- copy build files to MODS or GAME paths (remove this if not needed)
-    after_build(function(target)
-        local copy = function(env, ext)
-            for _, env in pairs(env:split(";")) do
-                if os.exists(env) then
-                    local plugins = path.join(env, ext, "F4SE/Plugins")
-                    os.mkdir(plugins)
-                    os.trycp(target:targetfile(), plugins)
-                    os.trycp(target:symbolfile(), plugins)
-                end
-            end
-        end
-        if os.getenv("XSE_FO4_MODS_PATH") then
-            copy(os.getenv("XSE_FO4_MODS_PATH"), target:name())
-        elseif os.getenv("XSE_FO4_GAME_PATH") then
-            copy(os.getenv("XSE_FO4_GAME_PATH"), "Data")
-        end
-    end)
+    -- add install files
+    add_installfiles("res/(**)")

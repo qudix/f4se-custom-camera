@@ -1,0 +1,28 @@
+{
+    "modName": "CustomCamera",
+    "keybinds": [{
+        "id": "toggle_shoulder",
+        "desc": "Toggle Shoulder",
+        "action": {
+            "type": "CallGlobalFunction",
+            "script": "CustomCamera",
+            "function": "ToggleShoulder"
+        }
+    },{
+        "id": "toggle_tfc1",
+        "desc": "Toggle Free Cam",
+        "action": {
+            "type": "CallGlobalFunction",
+            "script": "CustomCamera",
+            "function": "ToggleFreeCamera"
+        }
+    },{
+        "id": "toggle_tfc2",
+        "desc": "Toggle Free Cam (Pause Game)",
+        "action": {
+            "type": "CallGlobalFunction",
+            "script": "CustomCamera",
+            "function": "ToggleFreeCameraFreeze"
+        }
+    }]
+}

@@ -1,0 +1,944 @@
+{
+    "modName": "CustomCamera",
+    "displayName": "Custom Camera",
+    "minMcmVersion": 2,
+    "content": [{
+        "type": "spacer",
+        "numLines": 8
+    },{
+        "text": "<p align='center'><font size='32'>Custom Camera</font><font size='10'> BETA 5</font></p>",
+        "type": "text",
+        "html": true
+    }],
+    "pages": [{
+        "pageDisplayName": "$CUSTOMCAMERA_AC_PAGE",
+        "content": [{
+            "text": "$CUSTOMCAMERA_AC_SECT_NORMAL",
+            "type": "section"
+        },{
+            "id": "fACNormalStandPosXRight:Camera",
+            "text": "$CUSTOMCAMERA_AC_SETT_NORMAL_STAND_POS_X_RIGHT",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_AC_HELP_NORMAL_STAND_POS_X_RIGHT",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACNormalStandPosXLeft:Camera",
+            "text": "$CUSTOMCAMERA_ACNormalStandPosXLeft",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACNormalStandPosXLeft_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACNormalStandPosZ:Camera",
+            "text": "$CUSTOMCAMERA_ACNormalStandPosZ",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACNormalStandPosZ_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACNormalSneakPosXRight:Camera",
+            "text": "$CUSTOMCAMERA_ACNormalSneakPosXRight",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACNormalSneakPosXRight_Help",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACNormalSneakPosXLeft:Camera",
+            "text": "$CUSTOMCAMERA_ACNormalSneakPosXLeft",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACNormalSneakPosXLeft_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACNormalSneakPosZ:Camera",
+            "text": "$CUSTOMCAMERA_ACNormalSneakPosZ",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACNormalSneakPosZ_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "text": "$CUSTOMCAMERA_Standard_MeleeCamera",
+            "type": "section"    
+        },{
+            "id": "fACMeleeStandPosXRight:Camera",
+            "text": "$CUSTOMCAMERA_ACMeleeStandPosXRight",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACMeleeStandPosXRight_Help",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACMeleeStandPosXLeft:Camera",
+            "text": "$CUSTOMCAMERA_ACMeleeStandPosXLeft",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACMeleeStandPosXLeft_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACMeleeStandPosZ:Camera",
+            "text": "$CUSTOMCAMERA_ACMeleeStandPosZ",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACMeleeStandPosZ_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACMeleeSneakPosXRight:Camera",
+            "text": "$CUSTOMCAMERA_ACMeleeSneakPosXRight",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACMeleeSneakPosXRight_Help",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACMeleeSneakPosXLeft:Camera",
+            "text": "$CUSTOMCAMERA_ACMeleeSneakPosXLeft",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACMeleeSneakPosXLeft_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACMeleeSneakPosZ:Camera",
+            "text": "$CUSTOMCAMERA_ACMeleeSneakPosZ",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACMeleeSneakPosZ_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACMeleeZoom:Camera",
+            "text": "$CUSTOMCAMERA_ACMeleeZoom",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACMeleeZoom_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "text": "$CUSTOMCAMERA_Standard_CombatCamera",
+            "type": "section" 
+        },{
+            "id": "fACCombatStandPosXRight:Camera",
+            "text": "$CUSTOMCAMERA_ACCombatStandPosXRight",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACCombatStandPosXRight_Help",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACCombatStandPosXLeft:Camera",
+            "text": "$CUSTOMCAMERA_ACCombatStandPosXLeft",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACCombatStandPosXLeft_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACCombatStandPosZ:Camera",
+            "text": "$CUSTOMCAMERA_ACCombatStandPosZ",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACCombatStandPosZ_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACCombatSneakPosXRight:Camera",
+            "text": "$CUSTOMCAMERA_ACCombatSneakPosXRight",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACCombatSneakPosXRight_Help",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACCombatSneakPosXLeft:Camera",
+            "text": "$CUSTOMCAMERA_ACCombatSneakPosXLeft",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACCombatSneakPosXLeft_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACCombatSneakPosZ:Camera",
+            "text": "$CUSTOMCAMERA_ACCombatSneakPosZ",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACCombatSneakPosZ_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACCombatZoom:Camera",
+            "text": "$CUSTOMCAMERA_ACCombatZoom",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACCombatZoom_Help",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "text": "$CUSTOMCAMERA_Standard_Distance",
+            "type": "section"  
+        },{
+            "id": "fACMinDist:Camera",
+            "text": "$CUSTOMCAMERA_ACMinDist",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACMinDist_Help",
+            "valueOptions": {
+                "min": 0,
+                "max": 200,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACMaxDist:Camera",
+            "text": "$CUSTOMCAMERA_ACMaxDist",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACMaxDist_Help",
+            "valueOptions": {
+                "min": 0,
+                "max": 1000,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "text": "$CUSTOMCAMERA_Standard_Zoom",
+            "type": "section" 
+        },{
+            "id": "fACZoomSpeed:Camera",
+            "text": "$CUSTOMCAMERA_ACZoomSpeed",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACZoomSpeed_Help",
+            "valueOptions": {
+                "min": 1,
+                "max": 20,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fACZoomIncrement:Camera",
+            "text": "$CUSTOMCAMERA_ACZoomIncrement",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ACZoomIncrement_Help",
+            "valueOptions": {
+                "min": 0.01,
+                "max": 1.5,
+                "step": 0.01,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        }]
+    },{
+        "pageDisplayName": "$CUSTOMCAMERA_PowerArmor",
+        "content": [{
+            "text": "$CUSTOMCAMERA_PowerArmor_NormalCamera",
+            "type": "section"
+            },{
+                "id": "fPANormalStandPosXRight:Camera",
+                "text": "$CUSTOMCAMERA_PANormalStandPosXRight",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PANormalStandPosXRight_Help",
+                "valueOptions": {
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPANormalStandPosXLeft:Camera",
+                "text": "$CUSTOMCAMERA_PANormalStandPosXLeft",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PANormalStandPosXLeft_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 0,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPANormalStandPosZ:Camera",
+                "text": "$CUSTOMCAMERA_PANormalStandPosZ",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PANormalStandPosZ_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPANormalSneakPosXRight:Camera",
+                "text": "$CUSTOMCAMERA_PANormalSneakPosXRight",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PANormalSneakPosXRight_Help",
+                "valueOptions": {
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPANormalSneakPosXLeft:Camera",
+                "text": "$CUSTOMCAMERA_PANormalSneakPosXLeft",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PANormalSneakPosXLeft_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 0,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPANormalSneakPosZ:Camera",
+                "text": "$CUSTOMCAMERA_PANormalSneakPosZ",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PANormalSneakPosZ_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "text": "$CUSTOMCAMERA_PowerArmor_MeleeCamera",
+                "type": "section"
+            },{
+                "id": "fPAMeleeStandPosXRight:Camera",
+                "text": "$CUSTOMCAMERA_PAMeleeStandPosXRight",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PAMeleeStandPosXRight_Help",
+                "valueOptions": {
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPAMeleeStandPosXLeft:Camera",
+                "text": "$CUSTOMCAMERA_PAMeleeStandPosXLeft",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PAMeleeStandPosXLeft_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 0,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPAMeleeStandPosZ:Camera",
+                "text": "$CUSTOMCAMERA_PAMeleeStandPosZ",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PAMeleeStandPosZ_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPAMeleeSneakPosXRight:Camera",
+                "text": "$CUSTOMCAMERA_PAMeleeSneakPosXRight",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PAMeleeSneakPosXRight_Help",
+                "valueOptions": {
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPAMeleeSneakPosXLeft:Camera",
+                "text": "$CUSTOMCAMERA_PAMeleeSneakPosXLeft",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PAMeleeSneakPosXLeft_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 0,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPAMeleeSneakPosZ:Camera",
+                "text": "$CUSTOMCAMERA_PAMeleeSneakPosZ",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PAMeleeSneakPosZ_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPAMeleeZoom:Camera",
+                "text": "$CUSTOMCAMERA_PAMeleeZoom",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PAMeleeZoom_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "text": "$CUSTOMCAMERA_PowerArmor_CombatCamera",
+                "type": "section"
+            },{
+                "id": "fPACombatStandPosXRight:Camera",
+                "text": "$CUSTOMCAMERA_PACombatStandPosXRight",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PACombatStandPosXRight_Help",
+                "valueOptions": {
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPACombatStandPosXLeft:Camera",
+                "text": "$CUSTOMCAMERA_PACombatStandPosXLeft",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PACombatStandPosXLeft_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 0,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPACombatStandPosZ:Camera",
+                "text": "$CUSTOMCAMERA_PACombatStandPosZ",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PACombatStandPosZ_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPACombatSneakPosXRight:Camera",
+                "text": "$CUSTOMCAMERA_PACombatSneakPosXRight",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PACombatSneakPosXRight_Help",
+                "valueOptions": {
+                    "min": 0,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPACombatSneakPosXLeft:Camera",
+                "text": "$CUSTOMCAMERA_PACombatSneakPosXLeft",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PACombatSneakPosXLeft_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 0,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPACombatSneakPosZ:Camera",
+                "text": "$CUSTOMCAMERA_PACombatSneakPosZ",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PACombatSneakPosZ_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPACombatZoom:Camera",
+                "text": "$CUSTOMCAMERA_PACombatZoom",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PACombatZoom_Help",
+                "valueOptions": {
+                    "min": -100,
+                    "max": 100,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "text": "$CUSTOMCAMERA_PowerArmor_Distance",
+                "type": "section"  
+            },{
+                "id": "fPAMinDist:Camera",
+                "text": "$CUSTOMCAMERA_PAMinDist",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PAMinDist_Help",
+                "valueOptions": {
+                    "min": 0,
+                    "max": 200,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPAMaxDist:Camera",
+                "text": "$CUSTOMCAMERA_PAMaxDist",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PAMaxDist_Help",
+                "valueOptions": {
+                    "min": 0,
+                    "max": 1000,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "text": "$CUSTOMCAMERA_PowerArmor_Zoom",
+                "type": "section" 
+            },{
+                "id": "fPAZoomSpeed:Camera",
+                "text": "$CUSTOMCAMERA_PAZoomSpeed",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PAZoomSpeed_Help",
+                "valueOptions": {
+                    "min": 1,
+                    "max": 20,
+                    "step": 1,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            },{
+                "id": "fPAZoomIncrement:Camera",
+                "text": "$CUSTOMCAMERA_PAZoomIncrement",
+                "type": "slider",
+                "help": "$CUSTOMCAMERA_PAZoomIncrement_Help",
+                "valueOptions": {
+                    "min": 0.01,
+                    "max": 1.5,
+                    "step": 0.01,
+                    "sourceType": "ModSettingFloat"
+                },
+                "action": {
+                    "type": "CallGlobalFunction",
+                    "script": "CustomCamera",
+                    "function": "Update"
+                }
+            }]
+    },{
+        "pageDisplayName": "$CUSTOMCAMERA_Miscellaneous",
+        "content": [{
+            "text": "$CUSTOMCAMERA_Miscellaneous_FieldOfView",
+            "type": "section"
+        },{
+            "id": "f1stFOV:Camera",
+            "text": "$CUSTOMCAMERA_1stFOV",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_1stFOV_Help",
+            "valueOptions": {
+                "min": 1,
+                "max": 150,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "f3rdFOV:Camera",
+            "text": "$CUSTOMCAMERA_3rdFOV",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_3rdFOV_Help",
+            "valueOptions": {
+                "min": 1,
+                "max": 150,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "f3rdAimFOV:Camera",
+            "text": "$CUSTOMCAMERA_3rdAimFOV",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_3rdAimFOV_Help",
+            "valueOptions": {
+                "min": 1,
+                "max": 150,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "text": "CustomCamera_Miscellaneous_Other",
+            "type": "section" 
+        },{
+            "id": "fChangeSpeed:Camera",
+            "text": "$CUSTOMCAMERA_ChangeSpeed",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_ChangeSpeed_Help",
+            "valueOptions": {
+                "min": 1,
+                "max": 20,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPitchZoom:Camera",
+            "text": "$CUSTOMCAMERA_PitchZoom",
+            "type": "slider",
+            "help": "$CUSTOMCAMERA_PitchZoom_Help",
+            "valueOptions": {
+                "min": -500,
+                "max": 500,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        }]
+    },{
+        "pageDisplayName": "$CUSTOMCAMERA_Features",
+        "content": [{
+            "text": "$CUSTOMCAMERA_Features_Options",
+            "type": "section" 
+        },{
+            "id": "bVanityMode:Main",
+            "text": "$CUSTOMCAMERA_VanityMode",
+            "type": "switcher",
+            "help": "$CUSTOMCAMERA_VanityMode_Help",
+            "valueOptions": {
+                "sourceType": "ModSettingBool"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "text": "$CUSTOMCAMERA_Features_Hotkeys",
+            "type": "section" 
+        },{
+            "id": "swap_side",
+            "text": "$CUSTOMCAMERA_swap_side",
+            "type": "hotkey",
+            "help": "$CUSTOMCAMERA_swap_side_Help"
+        },{
+            "id": "toggle_tfc1",
+            "text": "$CUSTOMCAMERA_toggle_tfc1",
+            "type": "hotkey",
+            "help": "$CUSTOMCAMERA_toggle_tfc1_Help"
+        },{
+            "id": "toggle_tfc2",
+            "text": "$CUSTOMCAMERA_toggle_tfc2",
+            "type": "hotkey",
+            "help": "$CUSTOMCAMERA_toggle_tfc2_Help"
+        }]   
+    }]
+}
