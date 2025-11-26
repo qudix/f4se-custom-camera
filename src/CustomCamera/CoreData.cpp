@@ -1,5 +1,7 @@
 #include "CustomCamera/CoreData.h"
 
+#include <SimpleIni.h>
+
 namespace CustomCamera
 {
 	void CoreData::Load()

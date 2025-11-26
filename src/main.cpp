@@ -15,21 +15,12 @@ struct Hook_PlayerCharacter
 		return result;
 	}
 
-	inline static REL::Relocation<decltype(SetSneaking)> _SetSneaking;
-
-	static void Install()
-	{
-		static REL::Relocation vtbl{ RE::PlayerCharacter::VTABLE[0] };
-		_SetSneaking = vtbl.write_vfunc(0x120, SetSneaking);
-	}
+	static inline REL::HookVFT _SetSneaking{ "SetSneaking", RE::PlayerCharacter::VTABLE[0], 0x120, SetSneaking };
 };
 
 void OnMessage(F4SE::MessagingInterface::Message* a_msg)
 {
     switch (a_msg->type) {
-		case F4SE::MessagingInterface::kPostLoad: {
-			Hook_PlayerCharacter::Install();
-		} break;
         case F4SE::MessagingInterface::kGameDataReady: {
 			CustomCamera::CoreData::GetSingleton()->Load();
             CustomCamera::Core::GetSingleton()->Init();
@@ -53,7 +44,7 @@ void OnSerialLoad(const F4SE::SerializationInterface* a_intfc)
 				core->OnSerialLoad(a_intfc, version, length);
 			} break;
 			default: {
-				logs::error("unrecognized signature type!");
+				REX::ERROR("unrecognized signature type!");
 			} break;
 		}
 	}

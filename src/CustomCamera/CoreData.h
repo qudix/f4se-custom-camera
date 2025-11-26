@@ -3,7 +3,7 @@
 namespace CustomCamera
 {
 	class CoreData :
-		public REX::Singleton<CoreData>
+		public REX::TSingleton<CoreData>
 	{
 	public:
 		struct MCM

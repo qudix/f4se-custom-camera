@@ -49,11 +49,11 @@ namespace CustomCamera::Papyrus
 
 	inline bool Bind(RE::BSScript::IVirtualMachine* a_vm)
 	{
-		const auto obj = "CustomCamera"sv;
-		a_vm->BindNativeMethod(obj, "Update"sv, Update);
-		a_vm->BindNativeMethod(obj, "ToggleShoulder"sv, ToggleShoulder);
-		a_vm->BindNativeMethod(obj, "ToggleFreeCamera"sv, ToggleFreeCamera);
-		a_vm->BindNativeMethod(obj, "ToggleFreeCameraFreeze"sv, ToggleFreeCameraFreeze);
+		const auto obj = "CustomCamera";
+		a_vm->BindNativeMethod(obj, "Update", Update);
+		a_vm->BindNativeMethod(obj, "ToggleShoulder", ToggleShoulder);
+		a_vm->BindNativeMethod(obj, "ToggleFreeCamera", ToggleFreeCamera);
+		a_vm->BindNativeMethod(obj, "ToggleFreeCameraFreeze", ToggleFreeCameraFreeze);
 
 		return true;
 	}

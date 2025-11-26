@@ -17,7 +17,7 @@ namespace CustomCamera
 	void Core::OnSerialLoad(const F4SE::SerializationInterface* a_intfc, std::uint32_t a_version, std::uint32_t& a_length)
 	{
 		if (!a_intfc->ReadRecordDataEx(a_length, m_leftShoulder)) {
-			logs::error("failed to load m_leftShoulder");
+			REX::ERROR("failed to load m_leftShoulder");
 		}
 	}
 
