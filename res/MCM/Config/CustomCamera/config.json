@@ -11,15 +11,15 @@
         "html": true
     }],
     "pages": [{
-        "pageDisplayName": "$CUSTOMCAMERA_AC_PAGE",
+        "pageDisplayName": "Standard",
         "content": [{
-            "text": "$CUSTOMCAMERA_AC_SECT_NORMAL",
+            "text": "Normal Camera",
             "type": "section"
         },{
             "id": "fACNormalStandPosXRight:Camera",
-            "text": "$CUSTOMCAMERA_AC_SETT_NORMAL_STAND_POS_X_RIGHT",
+            "text": "Standing - Horizontal (Right)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_AC_HELP_NORMAL_STAND_POS_X_RIGHT",
+            "help": "The right horizontal position of the camera while standing.",
             "valueOptions": {
                 "min": 0,
                 "max": 100,
@@ -33,9 +33,9 @@
             }
         },{
             "id": "fACNormalStandPosXLeft:Camera",
-            "text": "$CUSTOMCAMERA_ACNormalStandPosXLeft",
+            "text": "Standing - Horizontal (Left)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACNormalStandPosXLeft_Help",
+            "help": "The left horizontal position of the camera while standing.",
             "valueOptions": {
                 "min": -100,
                 "max": 0,
@@ -49,9 +49,9 @@
             }
         },{
             "id": "fACNormalStandPosZ:Camera",
-            "text": "$CUSTOMCAMERA_ACNormalStandPosZ",
+            "text": "Standing - Vertical",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACNormalStandPosZ_Help",
+            "help": "The vertical position of the camera while standing.",
             "valueOptions": {
                 "min": -100,
                 "max": 100,
@@ -65,9 +65,9 @@
             }
         },{
             "id": "fACNormalSneakPosXRight:Camera",
-            "text": "$CUSTOMCAMERA_ACNormalSneakPosXRight",
+            "text": "Sneaking - Horizontal (Right)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACNormalSneakPosXRight_Help",
+            "help": "The right horizontal position of the camera while sneaking.",
             "valueOptions": {
                 "min": 0,
                 "max": 100,
@@ -81,9 +81,9 @@
             }
         },{
             "id": "fACNormalSneakPosXLeft:Camera",
-            "text": "$CUSTOMCAMERA_ACNormalSneakPosXLeft",
+            "text": "Sneaking - Horizontal (Left)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACNormalSneakPosXLeft_Help",
+            "help": "The left horizontal position of the camera while sneaking.",
             "valueOptions": {
                 "min": -100,
                 "max": 0,
@@ -97,9 +97,9 @@
             }
         },{
             "id": "fACNormalSneakPosZ:Camera",
-            "text": "$CUSTOMCAMERA_ACNormalSneakPosZ",
+            "text": "Sneaking - Vertical",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACNormalSneakPosZ_Help",
+            "help": "The vertical position of the camera while sneaking.",
             "valueOptions": {
                 "min": -100,
                 "max": 100,
@@ -112,13 +112,13 @@
                 "function": "Update"
             }
         },{
-            "text": "$CUSTOMCAMERA_Standard_MeleeCamera",
+            "text": "Melee Camera",
             "type": "section"    
         },{
             "id": "fACMeleeStandPosXRight:Camera",
-            "text": "$CUSTOMCAMERA_ACMeleeStandPosXRight",
+            "text": "Standing - Horizontal (Right)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACMeleeStandPosXRight_Help",
+            "help": "The right horizontal position of the melee camera while standing.",
             "valueOptions": {
                 "min": 0,
                 "max": 100,
@@ -132,9 +132,9 @@
             }
         },{
             "id": "fACMeleeStandPosXLeft:Camera",
-            "text": "$CUSTOMCAMERA_ACMeleeStandPosXLeft",
+            "text": "Standing - Horizontal (Left)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACMeleeStandPosXLeft_Help",
+            "help": "The left horizontal position of the melee camera while standing.",
             "valueOptions": {
                 "min": -100,
                 "max": 0,
@@ -148,9 +148,9 @@
             }
         },{
             "id": "fACMeleeStandPosZ:Camera",
-            "text": "$CUSTOMCAMERA_ACMeleeStandPosZ",
+            "text": "Standing - Vertical",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACMeleeStandPosZ_Help",
+            "help": "The vertical position of the melee camera while standing.",
             "valueOptions": {
                 "min": -100,
                 "max": 100,
@@ -164,9 +164,9 @@
             }
         },{
             "id": "fACMeleeSneakPosXRight:Camera",
-            "text": "$CUSTOMCAMERA_ACMeleeSneakPosXRight",
+            "text": "Sneaking - Horizontal (Right)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACMeleeSneakPosXRight_Help",
+            "help": "The right horizontal position of the melee camera while sneaking.",
             "valueOptions": {
                 "min": 0,
                 "max": 100,
@@ -180,9 +180,9 @@
             }
         },{
             "id": "fACMeleeSneakPosXLeft:Camera",
-            "text": "$CUSTOMCAMERA_ACMeleeSneakPosXLeft",
+            "text": "Sneaking - Horizontal (Left)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACMeleeSneakPosXLeft_Help",
+            "help": "The left horizontal position of the melee camera while sneaking.",
             "valueOptions": {
                 "min": -100,
                 "max": 0,
@@ -196,9 +196,9 @@
             }
         },{
             "id": "fACMeleeSneakPosZ:Camera",
-            "text": "$CUSTOMCAMERA_ACMeleeSneakPosZ",
+            "text": "Sneaking - Vertical",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACMeleeSneakPosZ_Help",
+            "help": "The vertical position of the melee camera while sneaking.",
             "valueOptions": {
                 "min": -100,
                 "max": 100,
@@ -212,9 +212,9 @@
             }
         },{
             "id": "fACMeleeZoom:Camera",
-            "text": "$CUSTOMCAMERA_ACMeleeZoom",
+            "text": "Zoom",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACMeleeZoom_Help",
+            "help": "How much the melee camera is zoomed in.",
             "valueOptions": {
                 "min": -100,
                 "max": 100,
@@ -227,13 +227,13 @@
                 "function": "Update"
             }
         },{
-            "text": "$CUSTOMCAMERA_Standard_CombatCamera",
+            "text": "Combat Camera",
             "type": "section" 
         },{
             "id": "fACCombatStandPosXRight:Camera",
-            "text": "$CUSTOMCAMERA_ACCombatStandPosXRight",
+            "text": "Standing - Horizontal (Right)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACCombatStandPosXRight_Help",
+            "help": "The right horizontal position of the combat camera while standing.",
             "valueOptions": {
                 "min": 0,
                 "max": 100,
@@ -247,9 +247,9 @@
             }
         },{
             "id": "fACCombatStandPosXLeft:Camera",
-            "text": "$CUSTOMCAMERA_ACCombatStandPosXLeft",
+            "text": "Standing - Horizontal (Left)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACCombatStandPosXLeft_Help",
+            "help": "The left horizontal position of the combat camera while standing.",
             "valueOptions": {
                 "min": -100,
                 "max": 0,
@@ -263,9 +263,9 @@
             }
         },{
             "id": "fACCombatStandPosZ:Camera",
-            "text": "$CUSTOMCAMERA_ACCombatStandPosZ",
+            "text": "Standing - Vertical",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACCombatStandPosZ_Help",
+            "help": "The vertical position of the combat camera while standing.",
             "valueOptions": {
                 "min": -100,
                 "max": 100,
@@ -279,9 +279,9 @@
             }
         },{
             "id": "fACCombatSneakPosXRight:Camera",
-            "text": "$CUSTOMCAMERA_ACCombatSneakPosXRight",
+            "text": "Sneaking - Horizontal (Right)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACCombatSneakPosXRight_Help",
+            "help": "The right horizontal position of the combat camera while sneaking.",
             "valueOptions": {
                 "min": 0,
                 "max": 100,
@@ -295,9 +295,9 @@
             }
         },{
             "id": "fACCombatSneakPosXLeft:Camera",
-            "text": "$CUSTOMCAMERA_ACCombatSneakPosXLeft",
+            "text": "Sneaking - Horizontal (Left)",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACCombatSneakPosXLeft_Help",
+            "help": "The left horizontal position of the combat camera while sneaking.",
             "valueOptions": {
                 "min": -100,
                 "max": 0,
@@ -311,9 +311,9 @@
             }
         },{
             "id": "fACCombatSneakPosZ:Camera",
-            "text": "$CUSTOMCAMERA_ACCombatSneakPosZ",
+            "text": "Sneaking - Vertical",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACCombatSneakPosZ_Help",
+            "help": "The vertical position of the combat camera while sneaking.",
             "valueOptions": {
                 "min": -100,
                 "max": 100,
@@ -327,9 +327,9 @@
             }
         },{
             "id": "fACCombatZoom:Camera",
-            "text": "$CUSTOMCAMERA_ACCombatZoom",
+            "text": "Zoom",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACCombatZoom_Help",
+            "help": "How much the combat camera is zoomed in.",
             "valueOptions": {
                 "min": -100,
                 "max": 100,
@@ -342,13 +342,13 @@
                 "function": "Update"
             }
         },{
-            "text": "$CUSTOMCAMERA_Standard_Distance",
+            "text": "Distance",
             "type": "section"  
         },{
             "id": "fACMinDist:Camera",
-            "text": "$CUSTOMCAMERA_ACMinDist",
+            "text": "Minimum Distance",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACMinDist_Help",
+            "help": "The minimum distance the camera can be. Must be lower than the maximum.",
             "valueOptions": {
                 "min": 0,
                 "max": 200,
@@ -362,9 +362,9 @@
             }
         },{
             "id": "fACMaxDist:Camera",
-            "text": "$CUSTOMCAMERA_ACMaxDist",
+            "text": "Maximum Distance",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACMaxDist_Help",
+            "help": "The maximum distance the camera can be. Must be higher than the minimum.",
             "valueOptions": {
                 "min": 0,
                 "max": 1000,
@@ -377,13 +377,13 @@
                 "function": "Update"
             }
         },{
-            "text": "$CUSTOMCAMERA_Standard_Zoom",
+            "text": "Zoom",
             "type": "section" 
         },{
             "id": "fACZoomSpeed:Camera",
-            "text": "$CUSTOMCAMERA_ACZoomSpeed",
+            "text": "Zoom Speed",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACZoomSpeed_Help",
+            "help": "How fast the camera can zoom in and out.",
             "valueOptions": {
                 "min": 1,
                 "max": 20,
@@ -397,9 +397,9 @@
             }
         },{
             "id": "fACZoomIncrement:Camera",
-            "text": "$CUSTOMCAMERA_ACZoomIncrement",
+            "text": "Zoom Increment",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ACZoomIncrement_Help",
+            "help": "How many increments the camera travels between each scroll.",
             "valueOptions": {
                 "min": 0.01,
                 "max": 1.5,
@@ -413,417 +413,417 @@
             }
         }]
     },{
-        "pageDisplayName": "$CUSTOMCAMERA_PowerArmor",
+        "pageDisplayName": "Power Armor",
         "content": [{
-            "text": "$CUSTOMCAMERA_PowerArmor_NormalCamera",
+            "text": "Normal Camera (PA)",
             "type": "section"
-            },{
-                "id": "fPANormalStandPosXRight:Camera",
-                "text": "$CUSTOMCAMERA_PANormalStandPosXRight",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PANormalStandPosXRight_Help",
-                "valueOptions": {
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPANormalStandPosXLeft:Camera",
-                "text": "$CUSTOMCAMERA_PANormalStandPosXLeft",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PANormalStandPosXLeft_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 0,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPANormalStandPosZ:Camera",
-                "text": "$CUSTOMCAMERA_PANormalStandPosZ",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PANormalStandPosZ_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPANormalSneakPosXRight:Camera",
-                "text": "$CUSTOMCAMERA_PANormalSneakPosXRight",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PANormalSneakPosXRight_Help",
-                "valueOptions": {
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPANormalSneakPosXLeft:Camera",
-                "text": "$CUSTOMCAMERA_PANormalSneakPosXLeft",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PANormalSneakPosXLeft_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 0,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPANormalSneakPosZ:Camera",
-                "text": "$CUSTOMCAMERA_PANormalSneakPosZ",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PANormalSneakPosZ_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "text": "$CUSTOMCAMERA_PowerArmor_MeleeCamera",
-                "type": "section"
-            },{
-                "id": "fPAMeleeStandPosXRight:Camera",
-                "text": "$CUSTOMCAMERA_PAMeleeStandPosXRight",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PAMeleeStandPosXRight_Help",
-                "valueOptions": {
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPAMeleeStandPosXLeft:Camera",
-                "text": "$CUSTOMCAMERA_PAMeleeStandPosXLeft",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PAMeleeStandPosXLeft_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 0,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPAMeleeStandPosZ:Camera",
-                "text": "$CUSTOMCAMERA_PAMeleeStandPosZ",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PAMeleeStandPosZ_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPAMeleeSneakPosXRight:Camera",
-                "text": "$CUSTOMCAMERA_PAMeleeSneakPosXRight",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PAMeleeSneakPosXRight_Help",
-                "valueOptions": {
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPAMeleeSneakPosXLeft:Camera",
-                "text": "$CUSTOMCAMERA_PAMeleeSneakPosXLeft",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PAMeleeSneakPosXLeft_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 0,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPAMeleeSneakPosZ:Camera",
-                "text": "$CUSTOMCAMERA_PAMeleeSneakPosZ",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PAMeleeSneakPosZ_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPAMeleeZoom:Camera",
-                "text": "$CUSTOMCAMERA_PAMeleeZoom",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PAMeleeZoom_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "text": "$CUSTOMCAMERA_PowerArmor_CombatCamera",
-                "type": "section"
-            },{
-                "id": "fPACombatStandPosXRight:Camera",
-                "text": "$CUSTOMCAMERA_PACombatStandPosXRight",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PACombatStandPosXRight_Help",
-                "valueOptions": {
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPACombatStandPosXLeft:Camera",
-                "text": "$CUSTOMCAMERA_PACombatStandPosXLeft",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PACombatStandPosXLeft_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 0,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPACombatStandPosZ:Camera",
-                "text": "$CUSTOMCAMERA_PACombatStandPosZ",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PACombatStandPosZ_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPACombatSneakPosXRight:Camera",
-                "text": "$CUSTOMCAMERA_PACombatSneakPosXRight",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PACombatSneakPosXRight_Help",
-                "valueOptions": {
-                    "min": 0,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPACombatSneakPosXLeft:Camera",
-                "text": "$CUSTOMCAMERA_PACombatSneakPosXLeft",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PACombatSneakPosXLeft_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 0,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPACombatSneakPosZ:Camera",
-                "text": "$CUSTOMCAMERA_PACombatSneakPosZ",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PACombatSneakPosZ_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPACombatZoom:Camera",
-                "text": "$CUSTOMCAMERA_PACombatZoom",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PACombatZoom_Help",
-                "valueOptions": {
-                    "min": -100,
-                    "max": 100,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "text": "$CUSTOMCAMERA_PowerArmor_Distance",
-                "type": "section"  
-            },{
-                "id": "fPAMinDist:Camera",
-                "text": "$CUSTOMCAMERA_PAMinDist",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PAMinDist_Help",
-                "valueOptions": {
-                    "min": 0,
-                    "max": 200,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPAMaxDist:Camera",
-                "text": "$CUSTOMCAMERA_PAMaxDist",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PAMaxDist_Help",
-                "valueOptions": {
-                    "min": 0,
-                    "max": 1000,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "text": "$CUSTOMCAMERA_PowerArmor_Zoom",
-                "type": "section" 
-            },{
-                "id": "fPAZoomSpeed:Camera",
-                "text": "$CUSTOMCAMERA_PAZoomSpeed",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PAZoomSpeed_Help",
-                "valueOptions": {
-                    "min": 1,
-                    "max": 20,
-                    "step": 1,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            },{
-                "id": "fPAZoomIncrement:Camera",
-                "text": "$CUSTOMCAMERA_PAZoomIncrement",
-                "type": "slider",
-                "help": "$CUSTOMCAMERA_PAZoomIncrement_Help",
-                "valueOptions": {
-                    "min": 0.01,
-                    "max": 1.5,
-                    "step": 0.01,
-                    "sourceType": "ModSettingFloat"
-                },
-                "action": {
-                    "type": "CallGlobalFunction",
-                    "script": "CustomCamera",
-                    "function": "Update"
-                }
-            }]
+        },{
+            "id": "fPANormalStandPosXRight:Camera",
+            "text": "Standing - Horizontal (Right)",
+            "type": "slider",
+            "help": "The right horizontal position of the camera while standing.",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPANormalStandPosXLeft:Camera",
+            "text": "Standing - Horizontal (Left)",
+            "type": "slider",
+            "help": "The left horizontal position of the camera while standing.",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPANormalStandPosZ:Camera",
+            "text": "Standing - Vertical",
+            "type": "slider",
+            "help": "The vertical position of the camera while standing.",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPANormalSneakPosXRight:Camera",
+            "text": "Sneaking - Horizontal (Right)",
+            "type": "slider",
+            "help": "The right horizontal position of the camera while sneaking.",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPANormalSneakPosXLeft:Camera",
+            "text": "Sneaking - Horizontal (Left)",
+            "type": "slider",
+            "help": "The left horizontal position of the camera while sneaking.",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPANormalSneakPosZ:Camera",
+            "text": "Sneaking - Vertical",
+            "type": "slider",
+            "help": "The vertical position of the camera while sneaking.",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "text": "Melee Camera (PA)",
+            "type": "section"
+        },{
+            "id": "fPAMeleeStandPosXRight:Camera",
+            "text": "Standing - Horizontal (Right)",
+            "type": "slider",
+            "help": "The right horizontal position of the melee camera while standing.",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPAMeleeStandPosXLeft:Camera",
+            "text": "Standing - Horizontal (Left)",
+            "type": "slider",
+            "help": "The left horizontal position of the melee camera while standing.",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPAMeleeStandPosZ:Camera",
+            "text": "Standing - Vertical",
+            "type": "slider",
+            "help": "The vertical position of the melee camera while standing.",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPAMeleeSneakPosXRight:Camera",
+            "text": "Sneaking - Horizontal (Right)",
+            "type": "slider",
+            "help": "The right horizontal position of the melee camera while sneaking.",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPAMeleeSneakPosXLeft:Camera",
+            "text": "Sneaking - Horizontal (Left)",
+            "type": "slider",
+            "help": "The left horizontal position of the melee camera while sneaking.",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPAMeleeSneakPosZ:Camera",
+            "text": "Sneaking - Vertical",
+            "type": "slider",
+            "help": "The vertical position of the melee camera while sneaking.",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPAMeleeZoom:Camera",
+            "text": "Zoom",
+            "type": "slider",
+            "help": "How much the melee camera is zoomed in.",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "text": "Combat Camera (PA)",
+            "type": "section"
+        },{
+            "id": "fPACombatStandPosXRight:Camera",
+            "text": "Standing - Horizontal (Right)",
+            "type": "slider",
+            "help": "The right horizontal position of the combat camera while standing.",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPACombatStandPosXLeft:Camera",
+            "text": "Standing - Horizontal (Left)",
+            "type": "slider",
+            "help": "The left horizontal position of the combat camera while standing.",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPACombatStandPosZ:Camera",
+            "text": "Standing - Vertical",
+            "type": "slider",
+            "help": "The vertical position of the combat camera when standing while standing.",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPACombatSneakPosXRight:Camera",
+            "text": "Sneaking - Horizontal (Right)",
+            "type": "slider",
+            "help": "The right horizontal position of the combat camera while sneaking.",
+            "valueOptions": {
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPACombatSneakPosXLeft:Camera",
+            "text": "Sneaking - Horizontal (Left)",
+            "type": "slider",
+            "help": "The left horizontal position of the combat camera while sneaking.",
+            "valueOptions": {
+                "min": -100,
+                "max": 0,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPACombatSneakPosZ:Camera",
+            "text": "Sneaking - Vertical",
+            "type": "slider",
+            "help": "The vertical position of the combat camera while sneaking.",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPACombatZoom:Camera",
+            "text": "Zoom",
+            "type": "slider",
+            "help": "How much the combat camera is zoomed in.",
+            "valueOptions": {
+                "min": -100,
+                "max": 100,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "text": "Distance (PA)",
+            "type": "section"  
+        },{
+            "id": "fPAMinDist:Camera",
+            "text": "Minimum Distance",
+            "type": "slider",
+            "help": "The minimum distance the camera can be. Must be lower than the maximum.",
+            "valueOptions": {
+                "min": 0,
+                "max": 200,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPAMaxDist:Camera",
+            "text": "Maximum Distance",
+            "type": "slider",
+            "help": "The maximum distance the camera can be. Must be higher than the minimum.",
+            "valueOptions": {
+                "min": 0,
+                "max": 1000,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "text": "Zoom (PA)",
+            "type": "section" 
+        },{
+            "id": "fPAZoomSpeed:Camera",
+            "text": "Zoom Speed",
+            "type": "slider",
+            "help": "How fast the camera can zoom in and out.",
+            "valueOptions": {
+                "min": 1,
+                "max": 20,
+                "step": 1,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        },{
+            "id": "fPAZoomIncrement:Camera",
+            "text": "Zoom Increment",
+            "type": "slider",
+            "help": "How many increments the camera travels between each scroll.",
+            "valueOptions": {
+                "min": 0.01,
+                "max": 1.5,
+                "step": 0.01,
+                "sourceType": "ModSettingFloat"
+            },
+            "action": {
+                "type": "CallGlobalFunction",
+                "script": "CustomCamera",
+                "function": "Update"
+            }
+        }]
     },{
-        "pageDisplayName": "$CUSTOMCAMERA_Miscellaneous",
+        "pageDisplayName": "Miscellaneous",
         "content": [{
-            "text": "$CUSTOMCAMERA_Miscellaneous_FieldOfView",
+            "text": "Field Of View",
             "type": "section"
         },{
             "id": "f1stFOV:Camera",
-            "text": "$CUSTOMCAMERA_1stFOV",
+            "text": "1st Person",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_1stFOV_Help",
+            "help": "First Person FOV.",
             "valueOptions": {
                 "min": 1,
                 "max": 150,
@@ -837,9 +837,9 @@
             }
         },{
             "id": "f3rdFOV:Camera",
-            "text": "$CUSTOMCAMERA_3rdFOV",
+            "text": "3rd Person",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_3rdFOV_Help",
+            "help": "Third Person FOV.",
             "valueOptions": {
                 "min": 1,
                 "max": 150,
@@ -853,9 +853,9 @@
             }
         },{
             "id": "f3rdAimFOV:Camera",
-            "text": "$CUSTOMCAMERA_3rdAimFOV",
+            "text": "3rd Person Aim",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_3rdAimFOV_Help",
+            "help": "Third Person Aim FOV.",
             "valueOptions": {
                 "min": 1,
                 "max": 150,
@@ -868,13 +868,13 @@
                 "function": "Update"
             }
         },{
-            "text": "CustomCamera_Miscellaneous_Other",
+            "text": "Other",
             "type": "section" 
         },{
             "id": "fChangeSpeed:Camera",
-            "text": "$CUSTOMCAMERA_ChangeSpeed",
+            "text": "Camera Change Speed",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_ChangeSpeed_Help",
+            "help": "How fast the camera can change state.",
             "valueOptions": {
                 "min": 1,
                 "max": 20,
@@ -888,9 +888,9 @@
             }
         },{
             "id": "fPitchZoom:Camera",
-            "text": "$CUSTOMCAMERA_PitchZoom",
+            "text": "Pitch Down Zoom",
             "type": "slider",
-            "help": "$CUSTOMCAMERA_PitchZoom_Help",
+            "help": "How much the camera can zoom as the pitch increases or decreases.",
             "valueOptions": {
                 "min": -500,
                 "max": 500,
@@ -904,15 +904,15 @@
             }
         }]
     },{
-        "pageDisplayName": "$CUSTOMCAMERA_Features",
+        "pageDisplayName": "Features",
         "content": [{
-            "text": "$CUSTOMCAMERA_Features_Options",
+            "text": "Options",
             "type": "section" 
         },{
             "id": "bVanityMode:Main",
-            "text": "$CUSTOMCAMERA_VanityMode",
+            "text": "Auto Vanity Mode",
             "type": "switcher",
-            "help": "$CUSTOMCAMERA_VanityMode_Help",
+            "help": "Enable or Disable auto vanity mode.",
             "valueOptions": {
                 "sourceType": "ModSettingBool"
             },
@@ -922,23 +922,23 @@
                 "function": "Update"
             }
         },{
-            "text": "$CUSTOMCAMERA_Features_Hotkeys",
+            "text": "Hotkeys",
             "type": "section" 
         },{
-            "id": "swap_side",
-            "text": "$CUSTOMCAMERA_swap_side",
+            "id": "toggle_shoulder",
+            "text": "Toggle Shoulder",
             "type": "hotkey",
-            "help": "$CUSTOMCAMERA_swap_side_Help"
+            "help": "Toggles between left and right camera position."
         },{
             "id": "toggle_tfc1",
-            "text": "$CUSTOMCAMERA_toggle_tfc1",
+            "text": "Toggle Free Cam",
             "type": "hotkey",
-            "help": "$CUSTOMCAMERA_toggle_tfc1_Help"
+            "help": "Toggle Free Cam."
         },{
             "id": "toggle_tfc2",
-            "text": "$CUSTOMCAMERA_toggle_tfc2",
+            "text": "Toggle Free Cam (Pause Game)",
             "type": "hotkey",
-            "help": "$CUSTOMCAMERA_toggle_tfc2_Help"
+            "help": "Toggle Free Cam and pause the game."
         }]   
     }]
 }
