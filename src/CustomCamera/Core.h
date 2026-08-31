@@ -3,7 +3,7 @@
 namespace CustomCamera
 {
 	class Core :
-		public REX::Singleton<Core>,
+		public REX::TSingleton<Core>,
 		public RE::BSTEventSink<RE::TESFurnitureEvent>,
 		public RE::BSTEventSink<RE::ActorEquipManagerEvent::Event>
 	{

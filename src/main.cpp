@@ -15,7 +15,7 @@ struct Hook_PlayerCharacter
 		return result;
 	}
 
-	static inline REL::HookVFT _SetSneaking{ "SetSneaking", RE::PlayerCharacter::VTABLE[0], 0x120, SetSneaking };
+	static inline REL::THookVFT _SetSneaking{ "SetSneaking", RE::PlayerCharacter::VTABLE[0], 0x120, SetSneaking };
 };
 
 void OnMessage(F4SE::MessagingInterface::Message* a_msg)
