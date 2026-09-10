@@ -1,7 +1,7 @@
 includes("lib/commonlibf4")
 
 set_project("f4se-custom-camera")
-set_version("0.5.4")
+set_version("0.5.5")
 set_license("GPL-3.0")
 set_languages("c++23")
 set_warnings("allextra")
